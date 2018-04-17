@@ -47,7 +47,8 @@ function removeFromCart(item) {
   if (item_index === null) { 
     return "This item is not in your cart.";
   }
-  cart.splice(item_index)
+  cart.splice(item_index, 1);
+  return cart;
 }
 
 function placeOrder(cardNumber) {
