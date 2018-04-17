@@ -20,7 +20,7 @@ function viewCart() {
   var items_count = cart.length;
   if (items_count === 0) { return "Your shopping cart is empty."}
   var resp = "In your cart, you have ";
-  var sep = ', and ';
+  var sep = ', ';
   for (let i = 0; i < items_count; i++) {
     let item = cart[i];
     if ( i == items_count - 1 ) { sep = '.'}
