@@ -20,11 +20,11 @@ function viewCart() {
   var items_count = cart.length;
   if (items_count === 0) { return "Your shopping cart is empty."}
   var resp = "In your cart, you have ";
-  var sep = ', ';
+  var sep = ', ', conj = '';
   for (let i = 0; i < items_count; i++) {
     let item = cart[i];
-    if ( i == items_count - 1 ) { sep = '.'}
-    resp += `${item.itemName} at $${item.itemPrice}${sep}`;
+    if ( i == items_count - 1 ) { sep = '.'; conj = 'and '}
+    resp += `${conj}${item.itemName} at $${item.itemPrice}${sep}`;
   }
   return resp;
 }
