@@ -21,9 +21,12 @@ function viewCart() {
   if (items_count === 0) { return "Your shopping cart is empty."}
   var resp = "In your cart, you have ";
   var sep = ', ', conj = '';
+  var multiple_items = (items_count > 1);
   for (let i = 0; i < items_count; i++) {
     let item = cart[i];
-    if ( i == items_count - 1 ) { sep = '.'; conj = 'and '}
+    let last_item = (i == items_count - 1);
+    if ( last_item ) { sep = '.'; }
+    if (last_item && multiple_items) { conj = 'and '; }
     resp += `${conj}${item.itemName} at $${item.itemPrice}${sep}`;
   }
   return resp;
