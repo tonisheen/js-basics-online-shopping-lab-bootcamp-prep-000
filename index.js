@@ -24,7 +24,7 @@ function viewCart() {
   for (let i = 0; i < items_count; i++) {
     let item = cart[i];
     if ( i == items_count - 1 ) { sep = '.'}
-    resp += `${item.itemName} at ${item.itemPrice}${sep}`;
+    resp += `${item.itemName} at $${item.itemPrice}${sep}`;
   }
   return resp;
 }
