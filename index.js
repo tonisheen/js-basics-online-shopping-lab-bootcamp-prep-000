@@ -45,7 +45,7 @@ function removeFromCart(item) {
     if (cart[i].itemName == item){ item_index = i }
   }
   if (item_index === null) { 
-    return "This item is not in your cart.";
+    return "That item is not in your cart.";
   }
   cart.splice(item_index, 1);
   return cart;
